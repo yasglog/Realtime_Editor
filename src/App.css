@@ -53,8 +53,10 @@ footer a{
    cursor: pointer;
    transition: all 0.3s ease-in-out;
    color: black;
+   background-color: #eee;
+   font-weight: bold;
 }
-.joinBtn{
+.joinBtn,.leavebtn{
    background: #4aee88;
 
    width: 100px;
@@ -62,7 +64,7 @@ footer a{
 
 }
 
-.joinBtn:hover{
+.joinBtn,.leavebtn:hover{
     background: #2b824c;
 }
 .createInfo{
@@ -81,5 +83,66 @@ footer a{
 .createNewBtn:hover,footer a:hover{
     color: #368654;
     border-color: #2b824c;
+}
+.mainWrap{
+    display: grid;
+    grid-template-columns: 230px 1fr;
+    height: 100vh;
+}
+
+.aside{
+   background: #1c1e29;
+   padding: 16px;
+   color: #fff;
+   display: flex;
+   flex-direction: column;
+
+}
+
+.aside_inner{
+    /* display: flex; */
+    flex: 1;
+}
+
+.clientList{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 10px;
+}
+.client{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-weight: bold;
+}
+.connect{
+    font-weight: 700;
+}
+.userName{
+    margin-top: 5px;
+}
+
+.logo{
+    border-bottom: 1px solid #424242;
+    padding-bottom: 10px;
+}
+.logoImage{
+    height: 60px;
+}
+.leavebtn{
+    margin-top: 20px;
+    width: 100%;
+    
+}
+
+.CodeMirror{
+ /* height: 100vh;
+  */
+  min-height: 100vh;
+ font-size: 18px;
+ line-height: 1.6;
+ padding-top: 20px;
 }
 
