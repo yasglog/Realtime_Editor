@@ -4,8 +4,21 @@
   "private": true,
   "dependencies": {
     "@uiw/react-codemirror": "^4.21.21",
+    "assert": "^2.1.0",
+    "browserify-fs": "^1.0.0",
+    "browserify-zlib": "^0.2.0",
+    "buffer": "^6.0.3",
+    "bufferutil": "^4.0.8",
     "codemirror": "^5.65.16",
+    "cors": "^2.8.5",
+    "crypto-browserify": "^3.12.0",
     "express": "^4.18.2",
+    "fs-extra": "^11.2.0",
+    "https-browserify": "^1.0.0",
+    "net-browserify": "^0.2.4",
+    "os-browserify": "^0.3.0",
+    "path-browserify": "^1.0.1",
+    "querystring-es3": "^0.2.1",
     "react": "^18.2.0",
     "react-avatar": "^5.0.3",
     "react-dom": "^18.2.0",
@@ -14,8 +27,17 @@
     "react-scripts": "5.0.1",
     "socket.io": "^4.7.4",
     "socket.io-client": "^4.7.4",
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.2.0",
+    "timers-browserify": "^2.0.12",
+    "tls-browserify": "^0.2.2",
+    "url": "^0.11.3",
+    "utf-8-validate": "^5.0.10",
+    "util": "^0.12.5",
     "uuid": "^9.0.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "webpack": "^5.90.2",
+    "ws": "^8.16.0"
   },
   "repository": {
     "type": "git",
@@ -26,10 +48,9 @@
     "url": "https://github.com/thepranaygupta/react-tailwind-css-starter-pack/issues"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "server:dev": "nodemon server.js",
-    "server:prod": "node server.js",
+    "start": " react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -51,7 +72,9 @@
     ]
   },
   "devDependencies": {
+    "node-polyfill-webpack-plugin": "^3.0.0",
     "nodemon": "^3.0.3",
+    "react-app-rewired": "^2.2.1",
     "tailwindcss": "^3.2.7"
   }
 }

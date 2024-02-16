@@ -1,9 +1,25 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import logo from "../assests/code-sync.png"
 import Client from '../compontents/Client';
 import "../App.css"
 import Editor from '../compontents/Editor';
+import { useLocation } from 'react-router-dom';
+
+import ACTIONS from '../Action';
+import { initSocket } from '../socket';
+// ACTIONS
 const EditorPage = () => {
+  
+  const socketRef=useRef(null);
+
+  const location=useLocation();
+  
+  useEffect(() => {
+    const init = async () => {
+        socketRef.current = await initSocket();
+    }
+    init();
+}, []);
   const [clients,SetClients]=useState([
     {socketId:1,username:'Yash G'},
     {socketId:2,username:'Abhi G'}
